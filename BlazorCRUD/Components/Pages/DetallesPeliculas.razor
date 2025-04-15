@@ -1,0 +1,26 @@
+﻿@page "/detalles-de-peliculas"
+@using Model
+
+<h3>Detalles de Peliculas</h3>
+<EditForm Model="@Peliculas">
+	<table class="table">
+		<tr>
+			<td>Titulo:</td>
+			<td><input type="text" @bind=Peliculas.Titulo/></td>
+		</tr>
+		<tr>
+			<td>Director:</td>
+			<td><input type="text" @bind=Peliculas.Director/></td>
+		</tr>
+		<tr>
+			<td>Fecha de lanzamiento:</td>
+			<td><input type="text" @bind=Peliculas.FechaLanzamiento/></td>
+		</tr>
+
+	</table>
+</EditForm>
+
+@code {
+	Film film = new Film();
+
+}
