@@ -1,26 +1,35 @@
-﻿@page "/detalles-de-peliculas"
+﻿@page "/detallespeliculas"
 @using Model
 
 <h3>Detalles de Peliculas</h3>
-<EditForm Model="@Peliculas">
-	<table class="table">
-		<tr>
-			<td>Titulo:</td>
-			<td><input type="text" @bind=Peliculas.Titulo/></td>
-		</tr>
-		<tr>
-			<td>Director:</td>
-			<td><input type="text" @bind=Peliculas.Director/></td>
-		</tr>
-		<tr>
-			<td>Fecha de lanzamiento:</td>
-			<td><input type="text" @bind=Peliculas.FechaLanzamiento/></td>
-		</tr>
 
-	</table>
+<EditForm Model="@pelicula">
+    <table class="table">
+        <tr>
+            <td>Titulo:</td>
+            <td><input type="text" @bind="pelicula.Titulo"/></td>
+        </tr>
+        <tr>
+            <td>Director:</td>
+            <td><input type="text" @bind="pelicula.Director"/></td>
+        </tr>
+        <tr>
+            <td>Fecha de Lanzamiento:</td>
+            <td><input type="text" @bind="pelicula.FechaLanzamiento"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="Guardar"/>
+                <input type="button" value="Cancelar" @onclick="CancelarPelicula"/>
+            </td>
+        </tr>
+    </table>
 </EditForm>
 
 @code {
-	Film film = new Film();
-
+    Pelicula pelicula = new Pelicula();
+    protected void CancelarPelicula()
+    {
+        
+    }
 }
